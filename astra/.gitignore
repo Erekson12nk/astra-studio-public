@@ -1,0 +1,39 @@
+# --- ключи и учётные записи: в репозиторий не уходят ---
+app_key.json
+creator/creator_private.key
+creator/issued.json
+accounts/
+*.token
+*_secret*.json
+client_secret*.json
+
+# --- сборки и артефакты ---
+build/
+dist/
+*.spec
+Astra.exe
+ffmpeg/
+__pycache__/
+*.py[cod]
+
+# --- рабочие файлы программы ---
+clips.db
+auto_clips/
+scan_cache/
+*.log
+
+# --- исходники и результаты нарезки ---
+25/
+*.mp4
+*.mkv
+*.mov
+*.ts
+*.wav
+*.mp3
+*.ass
+*.srt
+
+# --- локальные настройки среды ---
+.claude/settings.local.json
+.venv/
+venv/

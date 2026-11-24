@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# рабочие файлы конвейера (по умолчанию лежат вне папки, в C:\clipper-work)
+work/
+out/
+cache/
+*.db
+*.log
+
+# медиа
+*.mp4
+*.mkv
+*.mov
+*.ts
+*.wav
+*.mp3

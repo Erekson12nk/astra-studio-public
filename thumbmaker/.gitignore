@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# модели MediaPipe (~20 МБ) скачиваются сами при первом запуске
+model_cache/
+
+# готовые превью
+out/
+
+*.log
+
+# медиа
+*.mp4
+*.mkv
+*.mov
+*.ts
+*.wav
+*.mp3

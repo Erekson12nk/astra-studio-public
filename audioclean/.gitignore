@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# настройки конкретной машины
+settings.json
+
+# кеш распознавания рядом с видео
+*.speech.json
+*.log
+
+# медиа
+*.mp4
+*.mkv
+*.mov
+*.ts
+*.wav
+*.mp3

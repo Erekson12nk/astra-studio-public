@@ -1,0 +1,39 @@
+# English profanity. Same syntax as ru_profanity.txt.
+fuck
+fuk
+fck
+motherfuck
+shit
+bullshit
+bitch
+cunt
+whore
+slut
+dickhead
+=dick
+=dicks
+=cock
+=cocks
+asshole
+=arse
+=ass
+=asses
+dumbass
+jackass
+bastard
+faggot
+fagot
+nigger
+nigga
+retard
+twat
+wanker
+prick
+pussy
+bollock
+bugger
+goddamn
+=damn
+=crap
+son of a bitch
+what the fuck

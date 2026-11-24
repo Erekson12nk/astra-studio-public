@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+# cmd читает батник побайтово; CRLF — единственная безопасная форма
+*.bat text eol=crlf
+
+*.ttf binary
+*.tflite binary
+*.task binary
+*.exe binary
