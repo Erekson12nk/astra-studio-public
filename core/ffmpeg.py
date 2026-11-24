@@ -27,8 +27,27 @@ class FFmpegMissing(FFmpegError):
 _BINARIES: dict = {}
 
 
+def own_scripts() -> str:
+    """Папка Scripts окружения, из которого запущен Python: там yt-dlp и streamlink.
+
+    Студию запускают прямо .venv\\Scripts\\pythonw.exe, без activate, и эта папка
+    в PATH не попадает, а инструменты ищутся через PATH.
+    """
+    if getattr(sys, "frozen", False):
+        return ""
+    here = os.path.dirname(os.path.abspath(sys.executable))
+    for place in (here, os.path.join(here, "Scripts")):
+        if any(os.path.isfile(os.path.join(place, name))
+               for name in ("yt-dlp.exe", "yt-dlp", "streamlink.exe", "streamlink")):
+            return place
+    return ""
+
+
 def use_bundled_tools(*roots) -> bool:
     found = False
+    scripts = own_scripts()
+    if scripts and scripts not in os.environ.get("PATH", "").split(os.pathsep):
+        os.environ["PATH"] = scripts + os.pathsep + os.environ.get("PATH", "")
     for base in roots:
         if not base:
             continue

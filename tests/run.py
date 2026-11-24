@@ -72,7 +72,8 @@ HEAVY = {"studio_sense_test.py"}
 def interpreter(needs_heavy):
     if not needs_heavy:
         return sys.executable
-    for path in (os.path.join(os.path.dirname(REPO), "astra", ".venv",
+    for path in (os.path.join(REPO, ".venv", "Scripts", "python.exe"),
+                 os.path.join(os.path.dirname(REPO), "astra", ".venv",
                               "Scripts", "python.exe"),
                  os.path.join(REPO, "astra", ".venv", "Scripts", "python.exe")):
         if os.path.isfile(path):

@@ -870,7 +870,8 @@ LAUNCHER = "autopilot.bat"
 LAUNCHER_TEXT = "\r\n".join((
     "@echo off",
     "cd /d \"%~dp0\"",
-    "set VENV=..\\astra\\.venv\\Scripts\\pythonw.exe",
+    "set VENV=.venv\\Scripts\\pythonw.exe",
+    "if not exist \"%VENV%\" set VENV=..\\astra\\.venv\\Scripts\\pythonw.exe",
     "if exist \"%VENV%\" (",
     "    \"%VENV%\" -m core.autopilot run",
     ") else (",

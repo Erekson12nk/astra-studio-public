@@ -32,3 +32,4 @@ accounts/
 # базы клипов, оценок и выгрузок
 *.db
 *.sqlite3
+ffmpeg/
