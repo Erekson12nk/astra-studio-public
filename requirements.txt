@@ -1,29 +1,33 @@
 # Всё, что нужно Студии, службе и движкам. Ставит setup.bat в .venv рядом.
-# Python 3.12: mediapipe и onnx-сборки под более новые версии выходят с опозданием.
+# Python 3.12. Версии зафиксированы на проверенных: новые мажорные выпуски
+# ломают связку (например, av 19 несовместим с faster-whisper 1.2).
 
 # речь
-faster-whisper>=1.0
-numpy>=1.24
+faster-whisper==1.2.1
+ctranslate2==4.8.1
+av==18.1.0
+numpy==2.5.2
 
 # кадр: лица, вебка, превью
-opencv-python>=4.8
-mediapipe>=0.10.14
-pillow>=10.0
-onnxruntime>=1.17
+opencv-python==4.14.0.94
+mediapipe==0.10.35
+pillow==12.3.0
+onnxruntime==1.29.0
 
 # голос стримера: отличить его речь от чужой
-sherpa-onnx>=1.12
+sherpa-onnx==1.13.8
 
 # трей
-pystray>=0.19
+pystray==0.19.5
 
-# скачивание записей и звук эфира
+# скачивание записей и звук эфира. yt-dlp не фиксируется: Twitch и YouTube
+# часто меняются, нужна свежая версия
 yt-dlp
-streamlink>=6.0
+streamlink>=8.5,<9
 
 # расшифровка на видеокарте NVIDIA; без неё всё работает на процессоре
-nvidia-cublas-cu12>=12.4
-nvidia-cudnn-cu12>=9.0
+nvidia-cublas-cu12==12.9.2.10
+nvidia-cudnn-cu12==9.24.0.43
 
 # по желанию:
 # anthropic>=1.0     движок «claude» для поиска моментов
